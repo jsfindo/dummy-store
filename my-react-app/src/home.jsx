@@ -1,6 +1,19 @@
 
 
+
+import { Link } from 'react-router-dom';
+import './home.css'
+
 export default function Home() {
+  // 1. We define the function here inside the component
+  const scrollToShop = (e) => {
+    e.preventDefault();
+    const shopSection = document.getElementById('shop');
+    if (shopSection) {
+      shopSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <section className="hero">
@@ -13,6 +26,7 @@ export default function Home() {
             Thoughtfully crafted products for everyday life. No shortcuts,
             no excess — just things worth owning.
           </p>
+          {/* 2. Now this onClick call will find the function above perfectly */}
           <button className="btn-primary" onClick={scrollToShop} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
             Shop Now
           </button>
@@ -78,6 +92,13 @@ export default function Home() {
         <p>Browse the full collection — from kitchen tools to everyday carry, each piece chosen to earn a permanent place in your home.</p>
         <Link className="btn-primary" to="/shop">Shop Now</Link>
       </section>
-      </div>
+
+      <footer>
+        <span>© 2026 Verdant</span>
+        <span>
+          <Link to="/contact">Contact</Link> · <Link to="/returns">Returns</Link> · <Link to="/privacy">Privacy</Link>
+        </span>
+      </footer>
+    </div>
   );
 }

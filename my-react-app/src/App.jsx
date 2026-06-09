@@ -12,6 +12,8 @@ function App() {
         <Link to="/">Home</Link> |{" "}
         <Link to="/shop">Shop</Link> |{" "}
         <Link to="/cart">Cart</Link>
+
+
       </nav>
 
       <Routes>
@@ -19,6 +21,15 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+
+
+
+      <footer>
+        <span>© 2026 Verdant</span>
+        <span>
+          <Link to="/contact">Contact</Link> · <Link to="/returns">Returns</Link> · <Link to="/privacy">Privacy</Link>
+        </span>
+      </footer>
     </BrowserRouter>
   );
 }
