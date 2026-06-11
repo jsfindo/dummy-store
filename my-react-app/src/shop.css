@@ -1,0 +1,26 @@
+.grid{
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    gap:30px;
+
+
+}
+.Product{
+    margin:15px;
+    border: 2px black solid;
+    border-radius: 5px;
+    height:500px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+ gap:12px;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}

@@ -93,12 +93,7 @@ export default function Home() {
         <Link className="btn-primary" to="/shop">Shop Now</Link>
       </section>
 
-      <footer>
-        <span>© 2026 Verdant</span>
-        <span>
-          <Link to="/contact">Contact</Link> · <Link to="/returns">Returns</Link> · <Link to="/privacy">Privacy</Link>
-        </span>
-      </footer>
+      
     </div>
   );
 }
